@@ -55,9 +55,6 @@ function AnalyzeWorkouts() {
 
     return (
         <div>
-            <XYPlot xType="time" height={300} width={300}>
-            <LineSeries data={data} />
-            </XYPlot>
 
             <br></br><br></br>
             <button onClick={() => showTotalWeightLifted()}>show TotalWeightLifted</button>
