@@ -1,0 +1,136 @@
+import {React, useState} from 'react';
+
+
+function MergeSort() {
+
+
+    const [arrayToSort, setArrayToSort] = useState([]);
+    const [numBars, ] = useState(10);
+
+    
+
+    function delay (ms) {
+        return new Promise((resolve,reject) => setTimeout(resolve,ms));
+    }
+
+
+    function resetBars() {
+        var tempArray = [];
+        for (let index = 0; index < numBars; index++) {
+            tempArray[index] = Math.floor(Math.random() * 100);
+
+        }
+        setArrayToSort(tempArray);
+        //console.log("bars reset");
+    };
+
+    function logArray() {
+        console.log(arrayToSort);
+    }
+
+   function sortArray(arrayInput){
+        
+        //console.log("-------- Function start------");
+        //console.log("array input is: ", arrayInput.toString());
+
+
+        //var tempArray = [...arrayInput];
+        var arrayLen = arrayInput.length;
+
+        if (arrayLen <= 1){
+            //console.log("-------- In Base Case ------");
+            //console.log(arrayInput.toString());
+            //console.log("--------------");
+            return arrayInput;
+        }
+        //console.log("-------Splitting into 2 arrays -------");
+        var mid = arrayLen / 2;
+
+        var leftArray = arrayInput.slice(0,mid);
+        var rightArray = arrayInput.slice(mid);
+
+        //console.log("------- Calling sort rescursively -------");
+        leftArray = sortArray(leftArray);
+        rightArray = sortArray(rightArray);
+        //console.log("------- rescursive calls completed -------");
+
+        //console.log( "left after sort = ", leftArray.toString());
+        //console.log( "right after sort = ", rightArray.toString() );
+
+
+        //console.log("-----Calling merge------");
+        arrayInput = merge(leftArray, rightArray, arrayInput);
+        //console.log("----- Outside merge-------- ");
+        //console.log(" input after merge = ", arrayInput.toString());
+        //console.log("--------------------------")
+
+        return arrayInput;
+
+    }
+    
+ function merge(leftArray, rightArray, arrayInput){
+        //console.log("-----Inside merge------");
+       var leftCondition = 0;
+       var rightCondition = 0;
+        
+        var inputCondition = 0;
+        while (leftCondition <= leftArray.length - 1 && rightCondition <= rightArray.length - 1){
+            //console.log("-----Inside merge && while loop------");
+            //console.log("left array = ", leftArray.toString());
+            //console.log("right array = ", rightArray.toString());
+            if ( leftArray[leftCondition] < rightArray[rightCondition] ){
+                arrayInput[inputCondition] = leftArray[leftCondition];
+                inputCondition += 1;
+                leftCondition += 1;
+            }
+            else{
+                arrayInput[inputCondition] = rightArray[rightCondition];
+                inputCondition += 1;
+                rightCondition += 1;
+            }
+
+        }
+
+        while ( leftCondition <= leftArray.length - 1 ){
+            arrayInput[inputCondition] = leftArray[leftCondition];
+            inputCondition += 1;
+            leftCondition += 1;
+        }
+
+        while ( rightCondition <= rightArray.length - 1 ){
+            arrayInput[inputCondition] = rightArray[rightCondition];
+            inputCondition += 1;
+            rightCondition += 1;
+        }
+
+        return arrayInput;
+    }
+
+
+    return (
+        <div className="SortBox">
+        <div className="sortAlgoTitleContainer">
+        Merge Sort
+        </div>
+        <div className="barsContainer">
+            {arrayToSort.map((bar, index) => {
+
+                return (<div id={index} className='bar' key={index} style={{height: bar*5}}> <div>{bar}</div></div>)
+            }
+
+            )}
+        </div>
+
+        <div className="SortButtonsContainer">
+        <button className="SortButtons" onClick={() => sortArray(arrayToSort)}>Sort Array</button>
+        <button className="SortButtons" onClick={resetBars}>Reset Bars</button>
+        { /*    <button className="SortButtons" onClick={null}>Test Timeout</button> */ }
+        <button className="SortButtons" onClick={logArray}>Log Array</button>
+        { /*  <button className="SortButtons" onClick={() => sortArray(arrayToSort)}>Test Merge Sort</button> */ }
+
+        </div>
+    </div>
+    );
+}
+
+export default MergeSort;
