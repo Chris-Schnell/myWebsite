@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../node_modules/react-vis/dist/style.css';
 import {XYPlot, LineSeries} from 'react-vis';
 import axios from 'axios';
 
