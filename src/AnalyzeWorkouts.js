@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import {XYPlot, LineSeries} from 'react-vis';
 import axios from 'axios';
 
 function AnalyzeWorkouts() {
