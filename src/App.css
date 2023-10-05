@@ -386,6 +386,7 @@
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     margin: 2vw;
+    z-index: 2;
     
   }
   
@@ -405,8 +406,9 @@
   background-color: rgba(131, 131, 131, 0);
   width: 100vw;
   height: 37vh;
-  
+  overflow: hidden;
   position: absolute;
+  z-index: 1;
 }
 
 
