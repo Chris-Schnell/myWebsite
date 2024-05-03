@@ -15,11 +15,11 @@ class Home extends Component {
 
                     <br></br>
                     <br></br> As well, I have implemented a web app that calls the Spotify API via HTTP requests each time a user hits "Search Artists" to pull the top 10 artists for a genre.
-                    This app also retrieves & locally stores a bearer token from Spotify every 1 hr which is uesd to authenticate the users API requests.
+                    This app also retrieves & locally stores a bearer token from Spotify every 1 hr which is used to authenticate the users API requests.
 
                     <br></br><br></br>
                     Both apps can be accessed via the top menu, give them a try! <i>More features coming soon.</i>
-                    <br></br><br></br> Thanks for checking out the site, Have a great day.
+                    <br></br><br></br> Thanks for checking out the site, & have a great day.
                 </div>
 
                 
