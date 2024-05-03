@@ -5,7 +5,7 @@ class Home extends Component {
         return (
             <div className='HomePageOuterContainer'>
             
-            <div >
+            <div className='HomePageInnerContainer'>
                 <div  >
                     Hi, my name is Christopher Tyler Schnell.
                     <br></br>
@@ -14,15 +14,18 @@ class Home extends Component {
                     <br></br> Currently I have implemented a <b>Sort Visualizer</b> which I designed to show the user visually how different sort algorithms work.
 
                     <br></br>
-                    <br></br> As well, I have implemented a web app that interacts with the Spotify API via HTTP requests to pull the top 10 artists for a genre.
-                    This app retrieves a bearer token every 1 hr from Spotify that is uesd to authenticate the users API requests.
+                    <br></br> As well, I have implemented a web app that calls the Spotify API via HTTP requests each time a user hits "Search Artists" to pull the top 10 artists for a genre.
+                    This app also retrieves & locally stores a bearer token from Spotify every 1 hr which is uesd to authenticate the users API requests.
 
                     <br></br><br></br>
                     Both apps can be accessed via the top menu, give them a try! <i>More features coming soon.</i>
-                    <br></br><br></br> Best Regards
+                    <br></br><br></br> Thanks for checking out the site, Have a great day.
                 </div>
+
+                
                 
             </div>
+            <div className='HomePageBottomPadding'></div>
         </div>
         );
     }

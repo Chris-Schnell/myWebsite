@@ -40,6 +40,17 @@
 }
 
 .HomePageOuterContainer{
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  padding-bottom: 10vh;
+}
+
+.HomePageBottomPadding{
+  width: 100vw;
+  height: 20vh;
+}
+.HomePageInnerContainer{
   color: white;
   font-size: larger;
   font-family: 'Mont';
@@ -50,6 +61,7 @@
   background-color: rgba(255, 255, 255, 0.137);
   padding: 2vw;
   border-radius: 2vw;
+  height: fit-content;
 }
 
 .SortVisSortContainer{
