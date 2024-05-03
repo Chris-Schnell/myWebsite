@@ -58,7 +58,8 @@ function WorkoutHistory() {
                     return (
                         <div key={index}>
                         {sessions.sessionExercise ? (<div>
-                        <div> Session Date: {new Date(sessions.sessionDate).toLocaleDateString()} - {sessions.sessionExercise.name}</div> <button className="removeButton" onClick={e => deleteSession(e,sessions.id)}> Delete session</button>
+                            <button className="removeButton" onClick={e => deleteSession(e,sessions.id)}> Delete session</button>
+                        <div> Session Date: {new Date(sessions.sessionDate).toLocaleDateString()} - {sessions.sessionExercise.name}</div> 
                         <div>
                         RepsxWeight:
                             {

@@ -3,8 +3,8 @@ import axios from 'axios';
 
 function CreateWorkout() {
 
-    const [testMap, setTestMap] = useState({'reps': 'kush', 'weight': '420'});
-    const [testList, setTestList] = useState([["Gang", "Activity", "Ma", "Boi"],["Lucy", "In", "The", "Sky"]]);
+    const [testMap, setTestMap] = useState({'reps': 'default', 'weight': 'default'});
+    const [testList, setTestList] = useState([["default", "default", "default", "default"],["default", "default", "default", "default"]]);
 
     const [exerciseNames, setExerciseNames] = useState(['Choose an exercise']);
 
