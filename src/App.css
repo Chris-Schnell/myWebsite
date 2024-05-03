@@ -40,7 +40,7 @@
 }
 
 .HomePageOuterContainer{
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   overflow-y: auto;
   padding-bottom: 10vh;
@@ -52,7 +52,7 @@
 }
 .HomePageInnerContainer{
   color: white;
-  font-size: larger;
+  font-size: large;
   font-family: 'Mont';
   width: 80vw;
   margin: auto;
