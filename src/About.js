@@ -14,7 +14,7 @@ function About() {
                     cschnell4@arizona.edu</div>
 
                     <div className='AboutMeText'>LinkedIn<br/>
-                    <a className='AboutMeLink'>https://www.linkedin.com/in/<br/>christopher-tyler-schnell/</a></div>
+                    <a className='AboutMeLink' href='https://www.linkedin.com/in/christopher-tyler-schnell/'>https://www.linkedin.com/in/<br/>christopher-tyler-schnell/</a></div>
 
                     <div className='AboutMeText'>Located In<br/>
                     Tempe, AZ</div>

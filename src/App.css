@@ -346,6 +346,8 @@
 }
 .AboutMeLink{
   font-size: small;
+  text-decoration: none;
+  color: white;
 }
 
 /* Spotify stuff starts here */
@@ -636,7 +638,9 @@
 
 .SpotifyGenreButton{
   width: 30vw;
+  height: 5vh;
   font-size: small;
+  padding: .1vh;
 }
 
 .containGenreChoose{
